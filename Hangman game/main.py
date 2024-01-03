@@ -24,7 +24,7 @@ def print_current_state(current_word_state,attempts_remaining):
 
     for i in current_word_state:
         print(i,end=" ")
-     print("\tAttempts Remaining : {}".format(attempts_remaining)) 
+    print("\tAttempts Remaining : {}".format(attempts_remaining)) 
 
 def check_game_status(selected_word,current_word_state,attempts_remaining):
     """ IF game has ended or not """
