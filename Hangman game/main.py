@@ -38,3 +38,9 @@ def check_game_status(selected_word,current_word_state,attempts_remaining):
         return True
 
     return False   
+def play_game(attempts=5):
+    """ Main logic of our program """
+    selected_word = random_word_generator.pick_random_word()
+    current_word_state = "_"*len(selected_word)
+    attempts_remaining = attempts
+    print_current_state(current_word_state,attempts_remaining)
