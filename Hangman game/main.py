@@ -24,3 +24,4 @@ def print_current_state(current_word_state,attempts_remaining):
 
     for i in current_word_state:
         print(i,end=" ")
+     print("\tAttempts Remaining : {}".format(attempts_remaining)) 
