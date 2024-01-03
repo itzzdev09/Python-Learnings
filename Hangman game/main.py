@@ -44,3 +44,13 @@ def play_game(attempts=5):
     current_word_state = "_"*len(selected_word)
     attempts_remaining = attempts
     print_current_state(current_word_state,attempts_remaining)
+    while True:
+        input_char = input("Guess a charcter: ")
+        print("")
+        current_word_state, attempts_remaining = input_character_in_word(selected_word, input_char, current_word_state, attempts_remaining)
+        print_current_state(current_word_state,attempts_remaining)
+        game_ended = check_game_status(selected_word,current_word_state,attempts_remaining)
+        if game_ended:
+            break
+if __name__ == "__main__":
+    play_game()
