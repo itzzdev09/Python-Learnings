@@ -25,3 +25,16 @@ def print_current_state(current_word_state,attempts_remaining):
     for i in current_word_state:
         print(i,end=" ")
      print("\tAttempts Remaining : {}".format(attempts_remaining)) 
+
+def check_game_status(selected_word,current_word_state,attempts_remaining):
+    """ IF game has ended or not """
+
+    if current_word_state == selected_word:
+        print("You Won :D")
+        return True
+    elif attempts_remaining <= 0:
+        print("You Loose :( Please! Try Again")
+        print("Word was : {}".format(selected_word))
+        return True
+
+    return False   
