@@ -8,4 +8,11 @@ def change_current_word_state(selected_word,current_word_state,character):
         else:
             modified_word_state += current_word_state[i]    
 
-    return modified_word_state    
+    return modified_word_state   
+ 
+def input_character_in_word(selected_word, input_char, current_word_state, attempts_remaining):
+    if input_char in selected_word:
+        current_word_state = change_current_word_state(selected_word, current_word_state, input_char)
+    else:
+        attempts_remaining -= 1
+    return current_word_state, attempts_remaining 
