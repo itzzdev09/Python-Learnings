@@ -16,3 +16,11 @@ def input_character_in_word(selected_word, input_char, current_word_state, attem
     else:
         attempts_remaining -= 1
     return current_word_state, attempts_remaining 
+def print_current_state(current_word_state,attempts_remaining):
+
+    """ printing current condition of user """
+    
+    print("Current State: ",end=" ")
+
+    for i in current_word_state:
+        print(i,end=" ")
